@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from apps.views import ActivityDetailView
 from apps.views import ArcteryxProductsListView
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/activities/<str:identifier>/', ActivityDetailView.as_view(), name='activity-detail'),
     path('api/products/<str:label>/', ArcteryxProductsListView.as_view(), name='arcteryx-products-list'),
+    path('exercise/<str:muscle>', views.exercise),
 ]
