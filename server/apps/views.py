@@ -5,6 +5,23 @@ from django.http import JsonResponse
 from .fixtures.activities import mock_activities
 from .fixtures.arcteryx import mock_arc
 
+import requests
+import os
+from django.http import JsonResponse
+
+def exercise(request, muscle):
+    api_key = os.getenv('EXERCISE_API_KEY')
+    if not api_key:
+        return JsonResponse({'error': 'API key not set'})
+    
+    url = f"https://api.api-ninjas.com/v1/exercises?muscle={muscle}"
+    headers = {
+        'Authorization': f'Bearer {api_key}',
+        'Content-Type': 'application/json',
+    }
+    response = requests.get(url)
+    data = response.json()
+    return JsonResponse(data)
 
 class ActivityDetailView(View):
     def get(self, request, identifier):
