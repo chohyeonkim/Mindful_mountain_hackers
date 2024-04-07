@@ -3,6 +3,7 @@
 
 
 How to Set Up a Backend Using the Django Framework
+
 0. Navigate to the 'server' folder: `cd server`
 1. Create a virtual environment: `python -m venv myenv`
 2. Activate the virtual environment:
