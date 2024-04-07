@@ -3,6 +3,7 @@
 ## Introduction
 - Brief project overview
 - Project Name
+- tech stack : React Native, python(Django)
 
 ## How to Set Up and Run Frontend
 
