@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
-import { Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-// import { configureFonts, DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Image } from 'react-native';
+import InteractiveMap from '../pages/interactive-map';
+import { Pressable, StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
+// import { configureFonts, DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 
 const Tab = createBottomTabNavigator();
 
@@ -65,8 +65,6 @@ function ActivitiesScreen() {
   );
 }
 
-
-
 function MindfulnessScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#000000'}}>
@@ -84,10 +82,6 @@ function MindfulnessScreen() {
     </View>
   );
 }
-
-
-
-
 
 function StretchesScreen() {
   return (
@@ -108,12 +102,19 @@ function StretchesScreen() {
   );
 }
 
+function MapScreen() {
+  return (
+    <InteractiveMap />
+  )
+}
+
 export default function MyTabs() {
     return (
       <Tab.Navigator>
         <Tab.Screen name="Activities" component={ActivitiesScreen} />
         <Tab.Screen name="Mindfulness" component={MindfulnessScreen} />
         <Tab.Screen name="Stretches" component={StretchesScreen} />
+        <Tab.Screen name="Map" component={MapScreen} />
       </Tab.Navigator>
     );
   }
