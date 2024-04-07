@@ -164,7 +164,7 @@ function StretchesScreen({navigation}) {
       <BigSeperator/>
 
       <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingTop: 30, paddingBottom: 20}}>
-        PUT TITLE OF MUSCLE HERE
+        HAMSTRINGS
       </Text>
 
       <SmallSeperator/>
@@ -175,19 +175,20 @@ function StretchesScreen({navigation}) {
     }); */}
       <Pressable style={{paddingTop: 20}} onPress={() => navigation.navigate('IndividualStretchScreen', {info:'1st stretch info here'})}>
         <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30}}>
-        1st stretch 
+        Seated Hamstring Stretch
+
       </Text>
       </Pressable>
 
       <Pressable onPress={() => navigation.navigate('IndividualStretchScreen', {info: '2nd stretch info here'})}>
         <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30}}>
-        2nd stretch 
+        Standing Wall Hamstring Stretch
       </Text>
       </Pressable>
 
       <Pressable onPress={() => navigation.navigate('IndividualStretchScreen', {info: '3rd stretch info here'})}>
         <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30}}>
-        3rd stretch 
+        Supine Hamstring Stretch
       </Text>
       </Pressable>
       </ScrollView>
@@ -202,7 +203,11 @@ function IndividualStretchScreen({navigation, route}) {
   return(
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#000000'}}>
       <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30}}>
-      {"YAY " + route.params.info}
+    Sit on the floor with your legs extended straight in front of you.
+    Bend one knee and place the sole of your foot against the inner thigh of your opposite leg.
+    Lean forward from your hips, keeping your back straight.
+    Reach towards your toes with your hands, trying to keep your spine neutral.
+    Hold the stretch for 15-30 seconds and then switch legs.
     </Text>
     </View>
     
