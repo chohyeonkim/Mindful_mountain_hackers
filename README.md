@@ -1,8 +1,14 @@
 # Mindful_mountain_hackers
 
 ## Introduction
-- Brief project overview
-- Project Name
+- About the project
+The phone application has many features, including:
+
+  - a database of locations for various activities, such as hiking, snowboarding, rock climbing, and running
+  - a mindfulness page that provides the user a moment of peace and grounding
+  - a database of stretches that targets various muscles
+  - a map function that users can use to find new places
+
 - tech stack : React Native, python(Django)
 
 ## How to Set Up and Run Frontend
