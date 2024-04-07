@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from apps.views import ActivityDetailView
 from apps.views import ArcteryxProductsListView
-from . import views
+from apps import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
