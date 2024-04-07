@@ -9,6 +9,7 @@ import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import InteractiveMap from './pages/interactive-map';
 import HikeList from '../pages/hike-list';
+import Breathing from '../pages/breathing';
 
 const Tab = createBottomTabNavigator();
 
@@ -116,22 +117,10 @@ function MindfulnessScreen() {
       <BigSeperator/>
 
       <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingTop: 30, alignSelf: 'center'}}>
-        Quote of the day:
+        Breathing technique of the day:
       </Text>
 
-      <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30}}>
-        AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-      </Text>
-
-      <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingTop: 30, alignSelf: 'center'}}>
-        Stretch of the day: YAYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
-      </Text>
-
-      <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30}}>
-        YAYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
-      </Text>
-
-
+      <Breathing />
         </ScrollView>
      </SafeAreaView>
       

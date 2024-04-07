@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {ActivityIndicator, FlatList, Text, View, Image, ScrollView} from 'react-native';
+import { Pressable, StyleSheet, TouchableOpacity, ViewStyle, SafeAreaView} from 'react-native';
 
 const HikeList = () => {
   const [isLoading, setLoading] = useState(true);
@@ -28,14 +29,14 @@ const HikeList = () => {
   return (
 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#000000'}}>
     <ScrollView contentContainerStyle={{ alignItems: 'left', padding: 15 }}>
-        <Text style = {{ fontSize: 35, color: '#ededed' }}>Check out the amazing hiking trails in BC! 🏔️ </Text>
+        <Text style = {{ fontFamily: 'Cochin', fontSize: 35, color: '#ededed' }}>Check out the amazing hiking trails in BC! 🏔️ </Text>
           {trailsArray.map((trail, index) => (
             <View key={index}>
-              <Text style={{ fontSize: 24, paddingTop: 30, color: '#ededed' }}>{trail.Title}</Text>
-              <Text style={{ color: '#ededed' }}>Difficulty: {trail.difficulty}</Text>
-              <Text style={{ color: '#ededed' }}>Duration: {trail.time}</Text>
-              <Text style={{ color: '#ededed' }}>Season: {trail.season}</Text>
-              <Text style= {{ paddingBottom: 30 }}>Region: {trail.region}</Text>
+              <Text style={{ fontFamily: 'Cochin', fontSize: 24, paddingTop: 30, color: '#ededed' }}>{trail.Title}</Text>
+              <Text style={{ fontFamily: 'Cochin', color: '#ededed' }}>Difficulty: {trail.difficulty}</Text>
+              <Text style={{ fontFamily: 'Cochin', color: '#ededed' }}>Duration: {trail.time}</Text>
+              <Text style={{ fontFamily: 'Cochin', color: '#ededed' }}>Season: {trail.season}</Text>
+              <Text style= {{ fontFamily: 'Cochin', paddingBottom: 30 }}>Region: {trail.region}</Text>
             </View>
           ))}
         </ScrollView>
