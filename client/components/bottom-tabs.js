@@ -1,11 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import InteractiveMap from '../pages/interactive-map';
-import { Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Pressable, StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
 // import { configureFonts, DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
-import InteractiveMap from '../pages/interactive-map';
 
 const Tab = createBottomTabNavigator();
 
