@@ -1,3 +1,4 @@
+import json
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
@@ -16,9 +17,17 @@ def exercise(request, muscle):
     
     url = f"https://api.api-ninjas.com/v1/exercises?muscle={muscle}"
     headers = {
-        'Authorization': f'Bearer {api_key}',
-        'Content-Type': 'application/json',
+        'X-Api-Key': api_key
     }
+    response = requests.get(url, headers=headers)
+
+    if response.status_code == 200:
+        exercises = json.loads(response.text)
+        filtered_exercises = exercises[:3]
+        return JsonResponse(filtered_exercises, safe=False)
+    else:
+        return JsonResponse({'error': 'Failed to fetch data from API'})
+
     response = requests.get(url)
     data = response.json()
     return JsonResponse(data)
