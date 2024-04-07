@@ -1,4 +1,4 @@
-mock_data = [
+mock_arc = [
     {
         "id": 1,
         "label": "trails",

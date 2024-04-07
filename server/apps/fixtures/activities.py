@@ -1,4 +1,4 @@
-mock_data = [
+mock_activities = [
     # Snowboarding mock data with expanded details
     {
         "label": "snowboarding",
@@ -12,14 +12,14 @@ mock_data = [
         "dogFriendly": False,
         "season": "December-April",
         "details": "Join us for an unforgettable snowboarding experience at Whistler Peak. Our guides will lead you through untouched snow and challenging terrains, perfect for those looking to test their limits. Enjoy breathtaking views and pristine conditions.",
-        "image": {
+        "image": [
             "activities/snowboarding/snow_1.png",
             "activities/snowboarding/snow_2.png",
             "activities/snowboarding/snow_3.png",
             "activities/snowboarding/snow_4.png",
             "activities/snowboarding/snow_5.png",
             "activities/snowboarding/snow_6.png",
-        },
+        ],
         "region": "Whistler",
     },
     {
@@ -34,14 +34,14 @@ mock_data = [
         "dogFriendly": True,
         "season": "January-March",
         "details": "Cypress Mountain offers a freeride snowboarding adventure that caters to all skill levels. From gentle slopes for beginners to challenging freestyle terrains for the experienced, there's something for everyone. Capture the essence of mountain snowboarding with us.",
-        "image": {
+        "image": [
             "activities/snowboarding/snow_1.png",
             "activities/snowboarding/snow_2.png",
             "activities/snowboarding/snow_3.png",
             "activities/snowboarding/snow_4.png",
             "activities/snowboarding/snow_5.png",
             "activities/snowboarding/snow_6.png",
-        },
+        ],
         "region": "The North Shore",
     },
     {
@@ -56,14 +56,14 @@ mock_data = [
         "dogFriendly": True,
         "season": "December-February",
         "details": "Explore the friendly slopes of Mount Seymour with our family-oriented snowboarding sessions. Perfect for beginners and those looking to enjoy a leisurely day on the slopes. Our instructors provide personalized guidance to make your snowboarding experience memorable.",
-        "image": {
+        "image": [
             "activities/snowboarding/snow_1.png",
             "activities/snowboarding/snow_2.png",
             "activities/snowboarding/snow_3.png",
             "activities/snowboarding/snow_4.png",
             "activities/snowboarding/snow_5.png",
             "activities/snowboarding/snow_6.png",
-        },
+        ],
         "region": "The North Shore",
     },
     {
@@ -78,14 +78,14 @@ mock_data = [
         "dogFriendly": False,
         "season": "January-April",
         "details": "Embark on an exhilarating backcountry snowboarding journey in the vast wilderness of Blackcomb Mountain. This full-day adventure is tailored for experienced snowboarders seeking adrenaline-pumping descents and untouched powder. Our expert guides will lead you through challenging terrain while ensuring safety and unforgettable thrills.",
-        "image": {
+        "image": [
             "activities/snowboarding/snow_1.png",
             "activities/snowboarding/snow_2.png",
             "activities/snowboarding/snow_3.png",
             "activities/snowboarding/snow_4.png",
             "activities/snowboarding/snow_5.png",
             "activities/snowboarding/snow_6.png",
-        },
+        ],
         "region": "Whistler",
     },
     {
@@ -100,14 +100,14 @@ mock_data = [
         "dogFriendly": True,
         "season": "December-March",
         "details": "Experience the magic of night snowboarding at Grouse Mountain. Our guided night rides offer a unique opportunity to carve through freshly groomed trails under the starlit sky. Perfect for families and beginners, this easy-paced adventure promises unforgettable memories and stunning views of Vancouver's city lights.",
-        "image": {
+        "image": [
             "activities/snowboarding/snow_1.png",
             "activities/snowboarding/snow_2.png",
             "activities/snowboarding/snow_3.png",
             "activities/snowboarding/snow_4.png",
             "activities/snowboarding/snow_5.png",
             "activities/snowboarding/snow_6.png",
-        },
+        ],
         "region": "The North Shore",
     },
     {
@@ -122,14 +122,14 @@ mock_data = [
         "dogFriendly": False,
         "season": "December-April",
         "details": "Venture into a winter wonderland at Big White Ski Resort, where powder enthusiasts will find endless opportunities for snowboarding adventures. From tree-lined glades to open bowls, our guided tours cater to intermediate riders looking to explore the resort's diverse terrain. Join us for an unforgettable day of powder paradise.",
-        "image": {
+        "image": [
             "activities/snowboarding/snow_1.png",
             "activities/snowboarding/snow_2.png",
             "activities/snowboarding/snow_3.png",
             "activities/snowboarding/snow_4.png",
             "activities/snowboarding/snow_5.png",
             "activities/snowboarding/snow_6.png",
-        },
+        ],
         "region": "Kelowna",
     },
     # Hiking mock data with expanded details (Just adding one for brevity)
@@ -145,14 +145,14 @@ mock_data = [
         "dogFriendly": True,
         "season": "March-October",
         "details": "The Stawamus Chief Trail offers an exhilarating hiking experience with its steep ascent and rewarding summit views. Ideal for experienced hikers seeking a challenge, the trail provides panoramic views of Howe Sound and the surrounding mountains. Prepare for a physically demanding journey that culminates in breathtaking scenery.",
-        "image": {
+        "image": [
             "activities/hiking/hike_1.png",
             "activities/hiking/hike_2.png",
             "activities/hiking/hike_3.png",
             "activities/hiking/hike_4.png",
             "activities/hiking/hike_5.png",
             "activities/hiking/hike_6.png",
-        },
+        ],
         "region": "Squamish",
     },
     {
@@ -167,14 +167,14 @@ mock_data = [
         "dogFriendly": True,
         "season": "June-October",
         "details": "Traverse the stunning Garibaldi Lake Trail for a scenic hike through lush alpine meadows and pristine wilderness. This moderately challenging trail rewards hikers with breathtaking views of turquoise-blue lakes and towering peaks. Suitable for adventurers of all levels, the Garibaldi Lake Trail promises a memorable outdoor experience.",
-        "image": {
+        "image": [
             "activities/hiking/hike_1.png",
             "activities/hiking/hike_2.png",
             "activities/hiking/hike_3.png",
             "activities/hiking/hike_4.png",
             "activities/hiking/hike_5.png",
             "activities/hiking/hike_6.png",
-        },
+        ],
         "region": "Whistler",
     },
     {
@@ -189,14 +189,14 @@ mock_data = [
         "dogFriendly": False,
         "season": "June-September",
         "details": "Embark on a challenging trek through Joffre Lakes Provincial Park, home to a series of stunning turquoise lakes and glaciated peaks. The trail features steep ascents and rugged terrain, offering a thrilling adventure for experienced hikers. Prepare to be captivated by the park's natural beauty and awe-inspiring landscapes.",
-        "image": {
+        "image": [
             "activities/hiking/hike_1.png",
             "activities/hiking/hike_2.png",
             "activities/hiking/hike_3.png",
             "activities/hiking/hike_4.png",
             "activities/hiking/hike_5.png",
             "activities/hiking/hike_6.png",
-        },
+        ],
         "region": "Pemberton",
     },
     {
@@ -211,14 +211,14 @@ mock_data = [
         "dogFriendly": True,
         "season": "May-September",
         "details": "Embark on the ultimate hiking adventure along the Pacific Crest Trail, a long-distance trek stretching from Mexico to Canada. Traverse diverse landscapes, from desert valleys to alpine forests, and challenge yourself both physically and mentally. Join fellow thru-hikers on a journey of self-discovery and wilderness exploration.",
-        "image": {
+        "image": [
             "activities/hiking/hike_1.png",
             "activities/hiking/hike_2.png",
             "activities/hiking/hike_3.png",
             "activities/hiking/hike_4.png",
             "activities/hiking/hike_5.png",
             "activities/hiking/hike_6.png",
-        },
+        ],
         "region": "United States",
     },
     {
@@ -233,14 +233,14 @@ mock_data = [
         "dogFriendly": False,
         "season": "May-September",
         "details": "Embark on an epic coastal journey along the West Coast Trail, renowned for its rugged beauty and challenging terrain. This multi-day trek takes hikers through old-growth forests, pristine beaches, and dramatic sea cliffs. Prepare for tidal crossings, ladder climbs, and breathtaking sunsets as you explore one of Canada's most iconic trails.",
-        "image": {
+        "image": [
             "activities/hiking/hike_1.png",
             "activities/hiking/hike_2.png",
             "activities/hiking/hike_3.png",
             "activities/hiking/hike_4.png",
             "activities/hiking/hike_5.png",
             "activities/hiking/hike_6.png",
-        },
+        ],
         "region": "Vancouver Island",
     },
     {
@@ -255,14 +255,14 @@ mock_data = [
         "dogFriendly": False,
         "season": "Year-round",
         "details": "Discover the rugged beauty of Vancouver Island's coastline on the Juan de Fuca Marine Trail. This multi-day hiking adventure offers stunning ocean views, secluded beaches, and lush rainforests. Navigate through challenging terrain, including steep slopes and rocky shores, as you immerse yourself in the wild beauty of the Pacific Northwest.",
-        "image": {
+        "image": [
             "activities/hiking/hike_1.png",
             "activities/hiking/hike_2.png",
             "activities/hiking/hike_3.png",
             "activities/hiking/hike_4.png",
             "activities/hiking/hike_5.png",
             "activities/hiking/hike_6.png",
-        },
+        ],
         "region": "Vancouver Island",
     },
     # Trails mock data with expanded details (Just adding one for brevity)
@@ -278,14 +278,14 @@ mock_data = [
         "dogFriendly": False,
         "season": "April-September",
         "details": "Venture onto the Sunshine Coast Trail for a serene and scenic hike through British Columbia's stunning landscapes. This trail, stretching over 180 kilometers, offers hikers the opportunity to explore lush forests, coastal mountains, and tranquil lakes. Whether you're looking for a day hike or a multi-day adventure, the Sunshine Coast Trail promises an unforgettable experience.",
-        "image": {
+        "image": [
             "activities/trails/trails_1.png",
             "activities/trails/trails_2.png",
             "activities/trails/trails_3.png",
             "activities/trails/trails_4.png",
             "activities/trails/trails_5.png",
             "activities/trails/trails_6.png",
-        },
+        ],
         "region": "Sunshine Coast",
     },
     {
@@ -300,14 +300,14 @@ mock_data = [
         "dogFriendly": False,
         "season": "May-September",
         "details": "Embark on an epic coastal journey along the West Coast Trail, renowned for its rugged beauty and challenging terrain. This multi-day trek takes hikers through old-growth forests, pristine beaches, and dramatic sea cliffs. Prepare for tidal crossings, ladder climbs, and breathtaking sunsets as you explore one of Canada's most iconic trails.",
-        "image": {
+        "image": [
             "activities/trails/trails_1.png",
             "activities/trails/trails_2.png",
             "activities/trails/trails_3.png",
             "activities/trails/trails_4.png",
             "activities/trails/trails_5.png",
             "activities/trails/trails_6.png",
-        },
+        ],
         "region": "Vancouver Island",
     },
     {
@@ -322,14 +322,14 @@ mock_data = [
         "dogFriendly": False,
         "season": "Year-round",
         "details": "Discover the rugged beauty of Vancouver Island's coastline on the Juan de Fuca Marine Trail. This multi-day hiking adventure offers stunning ocean views, secluded beaches, and lush rainforests. Navigate through challenging terrain, including steep slopes and rocky shores, as you immerse yourself in the wild beauty of the Pacific Northwest.",
-        "image": {
+        "image": [
             "activities/trails/trails_1.png",
             "activities/trails/trails_2.png",
             "activities/trails/trails_3.png",
             "activities/trails/trails_4.png",
             "activities/trails/trails_5.png",
             "activities/trails/trails_6.png",
-        },
+        ],
         "region": "Vancouver Island",
     },
     {
@@ -344,14 +344,14 @@ mock_data = [
         "dogFriendly": True,
         "season": "June-September",
         "details": "Experience the awe-inspiring beauty of the Canadian Rockies on the Skyline Trail in Jasper National Park. This iconic backpacking route offers panoramic views of rugged mountain peaks, alpine meadows, and turquoise lakes.",
-        "image": {
+        "image": [
             "activities/trails/trails_1.png",
             "activities/trails/trails_2.png",
             "activities/trails/trails_3.png",
             "activities/trails/trails_4.png",
             "activities/trails/trails_5.png",
             "activities/trails/trails_6.png",
-        },
+        ],
         "region": "Jasper National Park",
     },
     {
@@ -366,14 +366,14 @@ mock_data = [
         "dogFriendly": True,
         "season": "Year-round",
         "details": "Discover the beauty of the Pacific Rim Trail, winding through ancient rainforests, rugged coastline, and pristine beaches on the western edge of Vancouver Island. This multi-day hiking adventure offers opportunities for wildlife viewing, beachcombing, and exploration of remote wilderness areas.",
-        "image": {
+        "image": [
             "activities/trails/trails_1.png",
             "activities/trails/trails_2.png",
             "activities/trails/trails_3.png",
             "activities/trails/trails_4.png",
             "activities/trails/trails_5.png",
             "activities/trails/trails_6.png",
-        },
+        ],
         "region": "Vancouver Island",
     },
     # Rock Climbing mock data with expanded details (Just adding one for brevity)
@@ -389,7 +389,14 @@ mock_data = [
         "dogFriendly": False,
         "season": "May-September",
         "details": "Embrace the thrill of rock climbing on Squamish's world-renowned granite cliffs. Our full-day climbing excursion caters to climbers of all levels, offering a chance to tackle a variety of routes with the guidance of experienced instructors. Squamish, known as the outdoor recreation capital of Canada, provides the perfect backdrop for an adrenaline-filled day.",
-        "image": {},
+        "image": [
+            "activities/rock_climbing/rock_1.png",
+            "activities/rock_climbing/rock_2.png",
+            "activities/rock_climbing/rock_3.png",
+            "activities/rock_climbing/rock_4.png",
+            "activities/rock_climbing/rock_5.png",
+            "activities/rock_climbing/rock_6.png",
+        ],
         "region": "Squamish",
     },
     {
@@ -404,14 +411,14 @@ mock_data = [
         "dogFriendly": False,
         "season": "Year-round",
         "details": "Explore the iconic Smoke Bluffs climbing area, located just minutes from downtown Squamish. With a wide range of routes catering to all skill levels, Smoke Bluffs offers an ideal setting for a full day of climbing adventure. Enjoy stunning views of the surrounding mountains and lush forests as you test your skills on granite cliffs.",
-        "image": {
+        "image": [
             "activities/rock_climbing/rock_1.png",
             "activities/rock_climbing/rock_2.png",
             "activities/rock_climbing/rock_3.png",
             "activities/rock_climbing/rock_4.png",
             "activities/rock_climbing/rock_5.png",
             "activities/rock_climbing/rock_6.png",
-        },
+        ],
         "region": "Squamish",
     },
     {
@@ -426,14 +433,14 @@ mock_data = [
         "dogFriendly": False,
         "season": "Year-round",
         "details": "Challenge yourself on one of Squamish's most iconic climbing routes, The Grand Wall. This legendary route offers a combination of crack climbing, face climbing, and exposure, making it a must-do for experienced climbers. With breathtaking views of the Chief and Howe Sound, The Grand Wall promises an unforgettable climbing experience.",
-        "image": {
+        "image": [
             "activities/rock_climbing/rock_1.png",
             "activities/rock_climbing/rock_2.png",
             "activities/rock_climbing/rock_3.png",
             "activities/rock_climbing/rock_4.png",
             "activities/rock_climbing/rock_5.png",
             "activities/rock_climbing/rock_6.png",
-        },
+        ],
         "region": "Squamish",
     },
     {
@@ -448,14 +455,14 @@ mock_data = [
         "dogFriendly": False,
         "season": "June-September",
         "details": "Embark on a high alpine climbing adventure in the Bugaboos, home to some of the finest granite spires in the world. With towering peaks, dramatic glaciers, and endless climbing opportunities, the Bugaboos offer a paradise for alpine enthusiasts. Join us for a multi-day expedition filled with challenging routes and breathtaking scenery.",
-        "image": {
+        "image": [
             "activities/rock_climbing/rock_1.png",
             "activities/rock_climbing/rock_2.png",
             "activities/rock_climbing/rock_3.png",
             "activities/rock_climbing/rock_4.png",
             "activities/rock_climbing/rock_5.png",
             "activities/rock_climbing/rock_6.png",
-        },
+        ],
         "region": "Purcell Mountains",
     },
     {
@@ -470,14 +477,14 @@ mock_data = [
         "dogFriendly": False,
         "season": "Year-round",
         "details": "Discover the limestone cliffs of Cheakamus Canyon, a hidden gem for rock climbers in the Squamish area. With a variety of sport climbing routes and beautiful forest surroundings, Cheakamus Canyon offers an ideal setting for a full day of climbing adventures. Whether you're a beginner or an experienced climber, there's something for everyone in this picturesque canyon.",
-        "image": {
+        "image": [
             "activities/rock_climbing/rock_1.png",
             "activities/rock_climbing/rock_2.png",
             "activities/rock_climbing/rock_3.png",
             "activities/rock_climbing/rock_4.png",
             "activities/rock_climbing/rock_5.png",
             "activities/rock_climbing/rock_6.png",
-        },
+        ],
         "region": "Squamish",
     },
 ]
