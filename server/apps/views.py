@@ -1,4 +1,8 @@
+import requests
+import os
+import random
 import json
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
@@ -6,8 +10,6 @@ from django.http import JsonResponse
 from .fixtures.activities import mock_activities
 from .fixtures.arcteryx import mock_arc
 
-import requests
-import os
 def exercise(request, muscle):
     api_key = os.getenv('EXERCISE_API_KEY')
     if not api_key:
@@ -49,7 +51,12 @@ class ArcteryxProductsListView(View):
 
 class DailyQuoteView(View):
     def get(self, request):
+        # Requests are restricted by IP to 5 per 30 second period by default.
         url = 'https://zenquotes.io/api/quotes/'
         response = requests.get(url)
-        data = response.json()
-        return JsonResponse(data)
+        if response.status_code == 200:
+            data = response.json()
+            random_quote = random.choice(data)
+            return JsonResponse(random_quote, safe=False)
+        else:
+            return JsonResponse({'error': 'Failed to fetch quotes'}, status=response.status_code)
