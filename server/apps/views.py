@@ -8,8 +8,6 @@ from .fixtures.arcteryx import mock_arc
 
 import requests
 import os
-from django.http import JsonResponse
-
 def exercise(request, muscle):
     api_key = os.getenv('EXERCISE_API_KEY')
     if not api_key:
@@ -48,3 +46,10 @@ class ArcteryxProductsListView(View):
             return JsonResponse(products, safe=False)
         else:
             return JsonResponse({'error': 'No products found for this label'}, status=404)
+
+class DailyQuoteView(View):
+    def get(self, request):
+        url = 'https://zenquotes.io/api/quotes/'
+        response = requests.get(url)
+        data = response.json()
+        return JsonResponse(data)
