@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
-import { Pressable, StyleSheet, Text, TouchableOpacity, View, ViewStyle } from 'react-native';
+import { Pressable, StyleSheet, Text, TouchableOpacity, View, ViewStyle, SafeAreaView,
+  ScrollView} from 'react-native';
 // import { configureFonts, DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native'
+import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import InteractiveMap from './pages/interactive-map';
 
@@ -82,9 +83,16 @@ function ActivitiesScreen({navigation}) {
 
 // HIKING MAP WHEN YOU CLICK HIKING BUTTON
 function HikingScreen({navigation}) {
+  <Text>
+    MAKE LIST HERE
+  </Text>
+}
+
+function MapScreen({navigation}) {
   return(
     <InteractiveMap />
   )
+
 }
 
 
@@ -93,16 +101,41 @@ function MindfulnessScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#000000'}}>
 
-      <View>
+      <SafeAreaView style={styles.container}>
+        <ScrollView style={styles.scrollView}>
+        <View style={{alignContent: 'center', alignSelf: 'center', alignItems: 'center'}}>
         <Image 
         source={require('./images/logo.png')}
          style={{width:150, height:150}}
          />
       </View>
 
-      <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin'}}>
-        Be mindful!
-        </Text>
+      <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', padding: 30}}>
+        Let's take a moment to be mindful!
+      </Text>
+
+      <BigSeperator/>
+
+      <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingTop: 30, alignSelf: 'center'}}>
+        Quote of the day:
+      </Text>
+
+      <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30}}>
+        AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+      </Text>
+
+      <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingTop: 30, alignSelf: 'center'}}>
+        Stretch of the day: YAYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+      </Text>
+
+      <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30}}>
+        YAYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+      </Text>
+
+
+        </ScrollView>
+     </SafeAreaView>
+      
     </View>
   );
 }
@@ -124,10 +157,12 @@ function StretchesScreen({navigation}) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#000000'}}>
 
+      <SafeAreaView style={styles.container}>
+        <ScrollView style={styles.scrollView}>
       <View>
         <Image 
         source={require('./images/logo.png')}
-        style={{width:150, height:150}}
+        style={{width:150, height:150, alignSelf: 'center'}}
         />
       </View>
 
@@ -146,8 +181,10 @@ function StretchesScreen({navigation}) {
 
       <SmallSeperator/>
 
-    {/* // STRETCH NAMES LIST */}
-    
+    {/* // STRETCH NAMES LIST
+    MuscleList.forEach(muscle) => {
+      
+    }); */}
       <Pressable style={{paddingTop: 20}} onPress={() => navigation.navigate('IndividualStretchScreen', {info:'1st stretch info here'})}>
         <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30}}>
         1st stretch 
@@ -165,6 +202,8 @@ function StretchesScreen({navigation}) {
         3rd stretch 
       </Text>
       </Pressable>
+      </ScrollView>
+     </SafeAreaView>
     </View>
   );
 }
@@ -187,11 +226,15 @@ const styles = StyleSheet.create({
   height: 2, 
   width: '25%',
   backgroundColor: "#ededed",
+  alignSelf: 'center',
+  alignContent: 'center'
   }, 
   bigSeparator: {
     height: 4, 
     width: '80%',
-    backgroundColor: "#ededed",
+    backgroundColor: "#ededed", 
+    alignSelf: 'center',
+    alignContent: 'center'
     }
 });
 
@@ -201,12 +244,15 @@ const SmallSeperator = () => <View style={styles.smallSeparator}/>
 
 const Stack = createNativeStackNavigator();
 
+// const MuscleList = [biceps, calves, chest, forearms, glutes, hamstrings];
+
 export default function MyTabs() {
     return (
       <Tab.Navigator>
         <Tab.Screen name="Activities" component={ActivitiesStack} />
         <Tab.Screen name="Mindfulness" component={MindfulnessScreen} />
         <Tab.Screen name="Stretches" component={StretchesStack} />
+        <Tab.Screen name="Map" component={MapScreen}/>
       </Tab.Navigator>
     );
   }
