@@ -4,7 +4,7 @@ import { Pressable, StyleSheet, Text, TouchableOpacity, View, ViewStyle } from '
 // import { configureFonts, DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image } from 'react-native';
-import {NavigationContainer} from '@react-navigation/native'
+import { NavigationContainer } from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import InteractiveMap from './pages/interactive-map';
 
