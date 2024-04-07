@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import InteractiveMap from '../pages/interactive-map';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,8 +25,14 @@ function MindfulnessScreen() {
 function StretchesScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Let's stretch together!</Text>
+        <Text>Let's stretch together!</Text>
     </View>
+  );
+}
+
+function MapScreen() {
+  return (
+    <InteractiveMap />
   );
 }
 
@@ -35,6 +42,7 @@ export default function MyTabs() {
         <Tab.Screen name="Activities" component={ActivitiesScreen} />
         <Tab.Screen name="Mindfulness" component={MindfulnessScreen} />
         <Tab.Screen name="Stretches" component={StretchesScreen} />
+        <Tab.Screen name="Map" component={MapScreen} />
       </Tab.Navigator>
     );
   }
