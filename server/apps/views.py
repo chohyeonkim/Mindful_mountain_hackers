@@ -15,7 +15,7 @@ def exercise(request, muscle):
     if not api_key:
         return JsonResponse({'error': 'API key not set'})
     
-    url = f"https://api.api-ninjas.com/v1/exercises?muscle={muscle}"
+    url = f"https://api.api-ninjas.com/v1/exercises?muscle={muscle}&type=stretching"
     headers = {
         'X-Api-Key': api_key
     }
