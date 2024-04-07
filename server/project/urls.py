@@ -19,6 +19,7 @@ from django.urls import path
 from apps.views import ActivityDetailView
 from apps.views import ArcteryxProductsListView
 from apps.views import DailyQuoteView
+from apps.views import RandomBreathingTechniqueView
 from apps import views
 
 urlpatterns = [
@@ -26,5 +27,6 @@ urlpatterns = [
     path('api/activities/<str:identifier>/', ActivityDetailView.as_view(), name='activity-detail'),
     path('api/products/<str:label>/', ArcteryxProductsListView.as_view(), name='arcteryx-products-list'),
     path('api/quote/', DailyQuoteView.as_view(), name='daily-quote'),
+    path('api/breathing/', RandomBreathingTechniqueView.as_view(), name='random-breathing-technique'),
     path('exercise/<str:muscle>', views.exercise),
 ]
