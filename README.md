@@ -7,6 +7,13 @@
 
 ## How to Set Up and Run Frontend
 
+0. Prequisites
+- Make sure you have Node.js installed on your system.
+- Install Expo Go mobile app on your iOS or Android device.
+1. Navigate to the 'client' folder: `cd client`
+2. Install Node Package Manger (npm):  `npm install`
+3. Run the project locally: `npx expo start` and scan the QR code to access it.
+
 ## How to Set Up and Run Backend
 
 0. Navigate to the 'server' folder: `cd server`

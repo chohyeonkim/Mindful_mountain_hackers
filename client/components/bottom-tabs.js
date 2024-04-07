@@ -8,6 +8,7 @@ import { Image } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import InteractiveMap from './pages/interactive-map';
+import HikeList from '../pages/hike-list';
 
 const Tab = createBottomTabNavigator();
 
@@ -83,9 +84,7 @@ function ActivitiesScreen({navigation}) {
 
 // HIKING MAP WHEN YOU CLICK HIKING BUTTON
 function HikingScreen({navigation}) {
-  <Text>
-    MAKE LIST HERE
-  </Text>
+  return <HikeList />
 }
 
 function MapScreen({navigation}) {
