@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from apps.views import ActivityGroupView
 from apps.views import ActivityDetailView
 from apps.views import ArcteryxProductsListView
 from apps.views import DailyQuoteView
@@ -24,6 +25,7 @@ from apps import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/activity/<str:label>/', ActivityGroupView.as_view(), name='activity-group'),
     path('api/activities/<str:identifier>/', ActivityDetailView.as_view(), name='activity-detail'),
     path('api/products/<str:label>/', ArcteryxProductsListView.as_view(), name='arcteryx-products-list'),
     path('api/quote/', DailyQuoteView.as_view(), name='daily-quote'),

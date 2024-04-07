@@ -32,6 +32,15 @@ def exercise(request, muscle):
     data = response.json()
     return JsonResponse(data)
 
+class ActivityGroupView(View):
+    def get(self, request, label):
+        activities_group = [item for item in mock_activities if item["label"] == label]
+        if activities_group:
+            return JsonResponse(activities_group, safe=False)
+        else:
+            return JsonResponse(
+                {"error": "No products found for this label"}, status=404
+            )
 
 class ActivityDetailView(View):
     def get(self, request, identifier):
