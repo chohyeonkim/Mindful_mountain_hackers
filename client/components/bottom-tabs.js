@@ -154,10 +154,79 @@ const StretchesStack = () => {
 
 // STRETCHES TAB
 function StretchesScreen({navigation}) {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#000000'}}>
+  const muscles = ['biceps', 'triceps', 'quadriceps'];
+  const [muscleData, setMuscleData] = useState(null);
+  useEffect(() => {
+    const fetchMuscleData = async () => {
+      try {
+        const muscleDataArray = await Promise.all(
+          muscles.map(async (muscle) => {
+            const response = await fetch(`http://your-api-url/muscle-data/${muscle}`);
+            if (!response.ok) {
+              throw new Error(`Failed to fetch muscle data for ${muscle}`);
+            }
+            const data = await response.json();
+            return data;
+          })
+        );
+        setMuscleDataList(muscleDataArray);
+      } catch (error) {
+        console.error('Error fetching muscle data:', error);
+      }
+    };
+    fetchMuscleData();
+  }, []);
 
-      <SafeAreaView style={styles.container}>
+  // return (
+  //   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#000000'}}>
+
+  //     <View>
+  //       <Image 
+  //       source={require('./images/logo.png')}
+  //       style={{width:150, height:150}}
+  //       />
+  //     </View>
+
+  //     <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin'}}>
+  //       Hi! Let's stretch together!
+  //     </Text>
+  //     <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30, textAlign: 'center'}}>
+  //       Scroll through the muscles below and pick a stretch!
+  //     </Text>
+      
+  //     <BigSeperator/>
+
+  //     <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingTop: 30, paddingBottom: 20}}>
+  //     {muscleData.name}
+  //     </Text>
+
+  //     <SmallSeperator/>
+
+  //   {/* // STRETCH NAMES LIST */}
+    
+  //     <Pressable style={{paddingTop: 20}} onPress={() => navigation.navigate('IndividualStretchScreen', {info:'1st stretch info here'})}>
+  //       <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30}}>
+  //       1st stretch 
+  //     </Text>
+  //     </Pressable>
+
+  //     <Pressable onPress={() => navigation.navigate('IndividualStretchScreen', {info: '2nd stretch info here'})}>
+  //       <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30}}>
+  //       2nd stretch 
+  //     </Text>
+  //     </Pressable>
+
+  //     <Pressable onPress={() => navigation.navigate('IndividualStretchScreen', {info: '3rd stretch info here'})}>
+  //       <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30}}>
+  //       3rd stretch 
+  //     </Text>
+  //     </Pressable>
+  //   </View>
+  // );
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#000000' }}>
+
+      <SafeAreaView style={styles.container}></SafeAreaView>
         <ScrollView style={styles.scrollView}>
       <View>
         <Image 
@@ -166,44 +235,31 @@ function StretchesScreen({navigation}) {
         />
       </View>
 
-      <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin'}}>
+      <Text style={{ color: '#ededed', fontSize: 24, fontFamily: 'Cochin' }}>
         Hi! Let's stretch together!
       </Text>
-      <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30, textAlign: 'center'}}>
+      <Text style={{ color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30, textAlign: 'center' }}>
         Scroll through the muscles below and pick a stretch!
       </Text>
       
-      <BigSeperator/>
-
-      <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingTop: 30, paddingBottom: 20}}>
-        PUT TITLE OF MUSCLE HERE
-      </Text>
-
-      <SmallSeperator/>
-
-    {/* // STRETCH NAMES LIST
-    MuscleList.forEach(muscle) => {
+      {/* BigSeperator */}
       
-    }); */}
-      <Pressable style={{paddingTop: 20}} onPress={() => navigation.navigate('IndividualStretchScreen', {info:'1st stretch info here'})}>
-        <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30}}>
-        1st stretch 
-      </Text>
-      </Pressable>
+      {muscleDataList.map((muscleData, index) => (
+        <View key={index}>
+          <Text style={{ color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingTop: 30, paddingBottom: 20 }}>
+            {muscleData.name}
+          </Text>
 
-      <Pressable onPress={() => navigation.navigate('IndividualStretchScreen', {info: '2nd stretch info here'})}>
-        <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30}}>
-        2nd stretch 
-      </Text>
-      </Pressable>
-
-      <Pressable onPress={() => navigation.navigate('IndividualStretchScreen', {info: '3rd stretch info here'})}>
-        <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30}}>
-        3rd stretch 
-      </Text>
-      </Pressable>
+          <View style={{ borderBottomWidth: 1, borderBottomColor: '#ededed', marginBottom: 20, width: '80%' }} />
+          
+          {muscleData.stretches.map((stretch, stretchIndex) => (
+            <Text key={stretchIndex} style={{ color: '#ededed', fontSize: 24, fontFamily: 'Cochin', paddingBottom: 30 }}>
+              {stretchIndex + 1}st stretch: {stretch}
+            </Text>
+          ))}
+        </View>
+      ))}
       </ScrollView>
-     </SafeAreaView>
     </View>
   );
 }
