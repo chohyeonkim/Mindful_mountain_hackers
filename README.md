@@ -3,13 +3,14 @@
 ## Introduction
 - Brief project overview
 - Project Name
+- tech stack : React Native, python(Django)
 
 ## How to Set Up and Run Frontend
 
 ## How to Set Up and Run Backend
 
 0. Navigate to the 'server' folder: `cd server`
-1. Create a virtual environment: `python -m venv myenv`
+1. Create a virtual environment: `python -m venv myvenv`
 2. Activate the virtual environment:
   - Windows: . `myvenv/Scripts/activate`
   - macOS/Linux: `myvenv myenv/bin/activate`
