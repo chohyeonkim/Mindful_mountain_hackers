@@ -49,7 +49,9 @@ const renderMarkers = () => {
               <Text style={{ textAlign: 'center'}}>{marker.name}</Text>
             </View>
             <Button
-            //   onPress={onPressLearnMore}
+              onPress={() => {
+                Alert.alert("Hi")
+              }}
               color="#013220"
               title="Learn More" />
           </Callout>

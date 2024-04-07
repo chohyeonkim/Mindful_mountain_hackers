@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import InteractiveMap from '../pages/interactive-map';
 import { Pressable, StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
 // import { configureFonts, DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
+import FetchTest from '../pages/fetch-test';
 
 const Tab = createBottomTabNavigator();
 
@@ -85,20 +86,21 @@ function MindfulnessScreen() {
 
 function StretchesScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#000000' }}>
+    // <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#000000' }}>
 
-      <View>
-        <Image 
-        source={require('./images/logo.png')}
-        style={{width:150, height:150}}
-        />
-      </View>
+    //   <View>
+    //     <Image 
+    //     source={require('./images/logo.png')}
+    //     style={{width:150, height:150}}
+    //     />
+    //   </View>
 
 
-      <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin'}}>
-        Let's stretch together!
-      </Text>
-    </View>
+    //   <Text style={{color: '#ededed', fontSize: 24, fontFamily: 'Cochin'}}>
+    //     Let's stretch together!
+    //   </Text>
+    // </View>
+    <FetchTest />
   );
 }
 
